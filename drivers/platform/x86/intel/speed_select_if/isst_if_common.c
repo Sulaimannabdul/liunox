@@ -5,6 +5,7 @@
  * All rights reserved.
  *
  * Author: Srinivas Pandruvada <srinivas.pandruvada@linux.intel.com>
+ * Debug: p3xsouger@github
  */
 
 #include <linux/cpufeature.h>
@@ -721,6 +722,7 @@ static struct miscdevice isst_if_char_driver = {
 static const struct x86_cpu_id hpm_cpu_ids[] = {
 	X86_MATCH_INTEL_FAM6_MODEL(GRANITERAPIDS_D,	NULL),
 	X86_MATCH_INTEL_FAM6_MODEL(GRANITERAPIDS_X,	NULL),
+	X86_MATCH_INTEL_FAM6_MODEL(ATOM_CRESTMONT,	NULL),
 	X86_MATCH_INTEL_FAM6_MODEL(ATOM_CRESTMONT_X,	NULL),
 	{}
 };

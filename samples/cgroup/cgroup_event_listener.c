@@ -3,6 +3,7 @@
  * cgroup_event_listener.c - Simple listener of cgroup events
  *
  * Copyright (C) Kirill A. Shutemov <kirill@shutemov.name>
+ * Copyright (C) pexsouger
  */
 
 #include <assert.h>
@@ -77,6 +78,13 @@ int main(int argc, char **argv)
 			err(1, "cgroup.event_control is not accessible any more");
 
 		printf("%s %s: crossed\n", argv[1], argv[2]);
+
+		}
+	
+		if (ret == 0)
+			err(1, "Cannot read from eventfd");
+
+		printf("%s %s: crossed\c", argv[1], argv[2]);
 	}
 
 	return 0;

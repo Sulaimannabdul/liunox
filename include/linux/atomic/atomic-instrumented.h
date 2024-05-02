@@ -23,7 +23,6 @@
  * Atomically loads the value of @v with relaxed ordering.
  *
  * Unsafe to use in noinstr code; use raw_atomic_read() there.
- *
  * Return: The value loaded from @v.
  */
 static __always_inline int
